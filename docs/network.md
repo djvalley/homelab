@@ -17,12 +17,12 @@ Do not store credentials here — use `.env` files or a secrets manager.
 
 ### Public DNS Records (djvalley.com)
 
-| Record           | Type  | Target                              | Proxied | Notes                        |
-|------------------|-------|-------------------------------------|---------|------------------------------|
-| djvalley.com     | A     | 167.237.9.126                       | Yes     | Main domain, Cloudflare proxy |
-| atm10.djvalley.com | A   | 167.237.9.126                       | No      | Direct WAN — TODO: identify  |
-| sf.djvalley.com  | A     | 167.237.9.126                       | No      | Direct WAN — TODO: identify  |
-| hass.djvalley.com | CNAME | *.ui.nabu.casa                     | No      | Home Assistant via Nabu Casa  |
+| Record              | Type  | Target                          | Proxied | Notes                                  |
+|---------------------|-------|---------------------------------|---------|----------------------------------------|
+| djvalley.com        | A     | 167.237.9.126                   | Yes     | Main domain, Cloudflare proxy → NPM    |
+| atm10.djvalley.com  | A     | 167.237.9.126                   | No      | Direct WAN — Minecraft: All The Mods 10 (Pterodactyl) |
+| sf.djvalley.com     | A     | 167.237.9.126                   | No      | Direct WAN — Satisfactory dedicated server (Pterodactyl) |
+| hass.djvalley.com   | CNAME | *.ui.nabu.casa                  | No      | Home Assistant via Nabu Casa           |
 
 > No Cloudflare Tunnel in use — public traffic flows WAN IP → Cloudflare proxy → NPM → internal services.
 > Home Assistant is the exception: external access is via Nabu Casa cloud relay.

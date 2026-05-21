@@ -61,11 +61,15 @@ All self-hosted services. Reverse proxy is Nginx Proxy Manager on docker01. All 
 
 ## Game Servers
 
-| Service             | Host  | Internal URL        | Public URL                        |
-|---------------------|-------|---------------------|-----------------------------------|
-| Pterodactyl Panel   | pve01 | http://10.0.10.29   | TODO — port unknown               |
-| Pterodactyl Wings 1 | pve03 | http://10.0.10.30   | —                                 |
-| Pterodactyl Wings 2 | pve05 | http://10.0.10.31   | —                                 |
+Managed via Pterodactyl. Game servers use direct WAN DNS (non-proxied) since game clients need raw TCP/UDP connections.
+
+| Service                    | Host  | Internal IP   | Public Address          |
+|----------------------------|-------|---------------|-------------------------|
+| Pterodactyl Panel          | pve01 | 10.0.10.29    | TODO (port unknown)     |
+| Pterodactyl Wings 1        | pve03 | 10.0.10.30    | —                       |
+| Pterodactyl Wings 2        | pve05 | 10.0.10.31    | —                       |
+| Minecraft: All The Mods 10 | wings | 167.237.9.126 | atm10.djvalley.com      |
+| Satisfactory               | wings | 167.237.9.126 | sf.djvalley.com         |
 
 ## Stale / Inactive
 
