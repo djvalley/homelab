@@ -16,24 +16,18 @@ Credentials are stored in `/opt/homelab/.env` (gitignored).
 | pihole       | @ranklancer/pihole-mcp (npm)   | stdio     | App password     |
 | uptime-kuma  | @davidfuchs/mcp-uptime-kuma    | stdio     | Username+password|
 | ntfy         | ntfy-mcp-server (npm)          | stdio     | None (pending)   |
+| home-assistant | HA built-in MCP Server       | HTTP POST | Bearer token     |
 
-## Pending
+## Home Assistant Notes
 
-- **Home Assistant** — HA MCP Server integration not yet enabled in HA.
-  Enable: Settings → Devices & Services → + Add Integration → "MCP Server"
-  Once enabled, add to `~/.claude.json`:
-  ```json
-  "home-assistant": {
-    "url": "http://10.0.10.20:8123/api/mcp_server",
-    "headers": {
-      "Authorization": "Bearer <HASS_TOKEN from .env>"
-    }
-  }
-  ```
+- Integration: `mcp_server` (title: "Assist"), state: loaded in HA 2026.5.0
+- Endpoint: `http://10.0.10.20:8123/api/mcp` — streamable HTTP transport (POST)
+- Authentication: Bearer token (long-lived access token, expires 2027)
+
+## Pending / Known Gaps
 
 - **Immich** — No suitable MCP package found. Will build custom or revisit.
-
-- **ntfy auth** — Token not yet configured. Once created, add to mcpServers:
+- **ntfy auth** — Token not yet configured. Once created, add to mcpServers env:
   `"NTFY_AUTH_TOKEN": "<token>"`
 
 ## Runtime Requirements
