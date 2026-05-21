@@ -167,8 +167,34 @@ Not yet configured on any homelab nodes. Planned for future setup.
 
 ## Reverse Proxy (NPM)
 
-Nginx Proxy Manager running on docker01. Admin UI at http://10.0.10.100:81.
-Full proxy host list (domain → internal service mapping) — TODO: document after NPM credentials available.
+Nginx Proxy Manager on docker01. Admin UI: http://10.0.10.100:81 / public: https://npm.djvalley.com
+
+| Public Domain               | Internal Target               |
+|-----------------------------|-------------------------------|
+| ai-api.djvalley.com         | http://10.0.10.102:4000       |
+| ai.djvalley.com             | http://10.0.10.102:8080       |
+| auth.djvalley.com           | http://server:9000 (Authentik)|
+| change.djvalley.com         | http://changedetector:5000    |
+| docker01.djvalley.com       | http://10.0.10.100:9000       |
+| docs.djvalley.com           | http://paperless:8000         |
+| hass.djvalley.com           | http://10.0.10.20:8123        |
+| home.djvalley.com           | http://homepage:3000          |
+| kuma.djvalley.com           | http://uptime-kuma:3001       |
+| meals.djvalley.com          | http://mealie:9000            |
+| n8n.djvalley.com            | http://n8n:5678               |
+| npm.djvalley.com            | http://npm:81                 |
+| ntfy.djvalley.com           | http://10.0.10.100:2525       |
+| ollama.djvalley.com         | http://10.0.10.102:11434      |
+| pbs01.djvalley.com          | https://10.0.10.9:8007        |
+| photos.djvalley.com         | http://10.0.10.101:2283       |
+| pihole1.djvalley.com        | http://10.0.10.5:80           |
+| pihole2.djvalley.com        | http://10.0.10.6:80           |
+| pve01–05.djvalley.com       | https://10.0.10.10–14:8006    |
+| sparkyft.djvalley.com       | http://sparkyft-frontend:80 (STALE — no container) |
+| spool.djvalley.com          | http://spoolman:8000          |
+| tasks.djvalley.com          | http://donetick:2021          |
+| tools.djvalley.com          | http://it-tools:80            |
+| wiki.djvalley.com           | http://bookstack:80           |
 
 ---
 
