@@ -1,0 +1,32 @@
+# Secrets and local env
+.env
+*.env
+!*.env.example
+secrets/
+*.key
+*.pem
+*.crt
+*.p12
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# Node
+node_modules/
+dist/
+.npm/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
